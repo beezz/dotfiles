@@ -14,7 +14,7 @@ Installed and needs configuration
 * tmux
 	* git
 	* install
-	* configuration
+	* configuration + tpm (plugin manager)
 * zsh
 	* git
 	* install + chsh
@@ -27,7 +27,7 @@ Not installed at all
 * neovim
 	* git
 	* install
-	* configuration
+	* configuration + neobundle (plugin manager)
 * pt
 	* git
 	* install
