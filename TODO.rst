@@ -38,7 +38,7 @@ Not installed at all
 	* configuration + neobundle (plugin manager)
 
 
-* pt
+* pt (or ripgrep)
 	* git
 	* install
 	* configuration
