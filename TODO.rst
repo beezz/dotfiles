@@ -10,11 +10,15 @@ Installed and needs configuration
 * dwm
 	* git
 	* install
-
+        * configuraion
+                * font (source code pro)
 
 * st
 	* git
 	* install
+        * configuration
+                * font (source code pro)
+                * colorscheme (light background)
 
 
 * zsh
