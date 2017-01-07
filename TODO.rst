@@ -20,7 +20,7 @@ Installed and needs configuration
 * zsh
 	* git
 	* install + chsh
-	* configuration
+	* configuration + oh-my-zsh
 
 
 * tmux
