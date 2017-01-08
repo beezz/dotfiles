@@ -46,6 +46,9 @@ PROMPT=$'%~ $(virtualenv_prompt_info)$(vcs_status)\n»%b '
 # load the junegunn's fuzzy command line finder configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# add user's local bin dir to the PATH
+export PATH=~/.local/bin:${PATH}
+
 # History settings
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
