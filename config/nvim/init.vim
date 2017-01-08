@@ -204,8 +204,8 @@ set nowrap
 set noswapfile
 set number
 
-let g:python_host_prog = '/home/beezz/neovim/neovim-py2/bin/python'
-let g:python3_host_prog = '/home/beezz/neovim/neovim-py3/bin/python'
+let g:python_host_prog = '/home/beezz/.config/nvim/pyenvs/py2/bin/python'
+let g:python3_host_prog = '/home/beezz/.config/nvim/pyenvs/py3/bin/python'
 
 let g:PaperColor_Light_Override = {'background' : '#0000'}
 
