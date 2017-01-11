@@ -204,8 +204,8 @@ set nowrap
 set noswapfile
 set number
 
-let g:python_host_prog = '/home/beezz/.config/nvim/pyenvs/py2/bin/python'
-let g:python3_host_prog = '/home/beezz/.config/nvim/pyenvs/py3/bin/python'
+let g:python_host_prog = $HOME.'/.config/nvim/pyenvs/py2/bin/python'
+let g:python3_host_prog = $HOME.'/.config/nvim/pyenvs/py3/bin/python'
 
 let g:PaperColor_Light_Override = {'background' : '#0000'}
 
@@ -248,8 +248,8 @@ function! NeoMakeCargoToggle()
 endfunction
 
 set hidden
-let g:racer_cmd = '/home/beezz/.cargo/bin/racer'
-let $RUST_SRC_PATH='/home/beezz/git-repos/github/rust/src'
+let g:racer_cmd = $HOME.'/.cargo/bin/racer'
+let $RUST_SRC_PATH=$HOME.'/git-repos/github/rust/src'
 
 " RestructuredText compatible tables
 let g:table_mode_corner_corner="+"
