@@ -84,6 +84,13 @@ syntax on
 syntax enable
 set smartcase
 set ignorecase
+set nowrap
+set noswapfile
+set hidden
+set number
+set cursorline
+set cursorcolumn
+
 let python_highlight_all = 1
 
 set t_Co=256
@@ -200,9 +207,6 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 nnoremap <F5> :GundoToggle<CR>
 
-set nowrap
-set noswapfile
-set number
 
 let g:python_host_prog = $HOME.'/.config/nvim/pyenvs/py2/bin/python'
 let g:python3_host_prog = $HOME.'/.config/nvim/pyenvs/py3/bin/python'
@@ -217,8 +221,6 @@ if executable('pt')
   let g:unite_source_grep_encoding = 'utf-8'
 endif
 
-set cursorline
-set cursorcolumn
 
 function! NeoMakeToggle()
     if exists('#NeoMakeToggle#BufWritePost')
@@ -247,7 +249,6 @@ function! NeoMakeCargoToggle()
     endif
 endfunction
 
-set hidden
 let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 let $RUST_SRC_PATH=$HOME.'/git-repos/github/rust/src'
 
