@@ -1,0 +1,9 @@
+sudo: required
+language: python
+
+install:
+  - pip install testinfra
+
+script:
+  - make install
+  - make test
