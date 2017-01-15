@@ -10,4 +10,4 @@ install:
 
 
 clean:
-	rm $(ZSHRC_LINK_NAME)
+	test -e $(ZSHRC_LINK_NAME) && rm $(ZSHRC_LINK_NAME) || echo ok
