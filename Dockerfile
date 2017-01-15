@@ -9,8 +9,11 @@ RUN apt-get update \
 	python-virtualenv \
  && rm -rf /var/lib/apt/lists/*
 
- RUN useradd -d /home/beezz/ -m beezz
+RUN useradd -d /home/beezz/ -m beezz
 
- USER beezz
+USER beezz
 
- WORKDIR /home/beezz
+WORKDIR /home/beezz
+
+RUN virtualenv dotfiles \
+ && dotfiles/bin/pip install testinfra
