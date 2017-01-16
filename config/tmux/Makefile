@@ -1,0 +1,13 @@
+TMUXCONF = .tmux.conf
+TMUXCONF_LINK_TARGET = $(CURDIR)/$(TMUXCONF)
+TMUXCONF_LINK_NAME = $(HOME)$(TMUXCONF)
+
+
+.PHONY: install clean
+
+install:
+	ln -s $(TMUXCONF_LINK_TARGET) $(TMUXCONF_LINK_NAME)
+
+
+clean:
+	test -e $(TMUXCONF_LINK_NAME) && rm $(TMUXCONF_LINK_NAME) || echo ok
