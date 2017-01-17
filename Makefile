@@ -22,17 +22,23 @@ tmux:
 tmux-clean:
 	$(MAKE) -C config/tmux clean
 
+x:
+	$(MAKE) -C config/x install
+
+x-clean:
+	$(MAKE) -C config/x clean
+
 
 test:
 	python -m pytest -v
 
-clean: zsh-clean tmux-clean
+clean: zsh-clean tmux-clean x-clean
 	@echo
 	@echo
 	@echo 'dotfiles uninstalled'
 	@echo
 
-install: zsh tmux
+install: zsh tmux x
 	@echo
 	@echo
 	@echo 'dotfiles installed. Enjoy.'
