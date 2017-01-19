@@ -5,9 +5,15 @@ ZSHRC_LINK_NAME = $(HOME)/$(ZSHRC)
 
 .PHONY: install clean
 
+
 install:
-	ln -s $(ZSHRC_LINK_TARGET) $(ZSHRC_LINK_NAME)
+	@test -L $(ZSHRC_LINK_NAME) \
+		|| ln -s $(ZSHRC_LINK_TARGET) $(ZSHRC_LINK_NAME) \
+		&& echo "- $(ZSHRC_LINK_NAME) installed"
 
 
 clean:
-	test -e $(ZSHRC_LINK_NAME) && rm $(ZSHRC_LINK_NAME) || echo ok
+	@test -L $(ZSHRC_LINK_NAME) \
+		&& rm $(ZSHRC_LINK_NAME) \
+		&& echo "- $(ZSHRC_LINK_NAME) uninstalled" \
+		|| echo "- $(ZSHRC_LINK_NAME) not installed"
