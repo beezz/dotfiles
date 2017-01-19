@@ -15,19 +15,25 @@ src-dir:
 
 
 zsh-clone:
-	@echo [ -d $(CURDIR)/src/zsh ] || cd $(CURDIR)/src && git clone https://github.com/zsh-users/zsh.git
+	@test -d $(CURDIR)/src/zsh/.git \
+		|| git clone https://github.com/zsh-users/zsh.git $(CURDIR)/src/zsh \
+		&& echo '- zsh repository cloned OK'
 
 
 zsh-pull: zsh-clone
-	@cd $(CURDIR)/src/zsh && git pull
+	@cd $(CURDIR)/src/zsh \
+		&& git pull
 
 
 zsh-configure: zsh-pull
-	@cd $(CURDIR)/src/zsh && ./configure
+	@cd $(CURDIR)/src/zsh \
+		&& autoheader \
+		&& autoconf \
+		&& ./configure
 
 
 zsh-make: zsh-configure
-	@cd $(CURDIR)/src/zsh && make
+	@cd $(CURDIR)/src/zsh && $(MAKE)
 
 
 zsh:
