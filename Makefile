@@ -9,6 +9,27 @@ docker-test:
 		   -i -t dotfiles /bin/bash \
 		   -c 'source dotfiles/bin/activate && cd code/dotfiles && make clean install test'
 
+
+src-dir:
+	mkdir -p $(CURDIR)/src
+
+
+zsh-clone:
+	@echo [ -d $(CURDIR)/src/zsh ] || cd $(CURDIR)/src && git clone git://git.code.sf.net/p/zsh/code
+
+
+zsh-pull: zsh-clone
+	@cd $(CURDIR)/src/zsh && git pull
+
+
+zsh-configure: zsh-pull
+	@cd $(CURDIR)/src/zsh && ./configure
+
+
+zsh-make: zsh-configure
+	@cd $(CURDIR)/src/zsh && make
+
+
 zsh:
 	$(MAKE) -C config/zsh install
 
