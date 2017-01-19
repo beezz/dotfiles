@@ -15,7 +15,7 @@ src-dir:
 
 
 zsh-clone:
-	@echo [ -d $(CURDIR)/src/zsh ] || cd $(CURDIR)/src && git clone git://git.code.sf.net/p/zsh/code
+	@echo [ -d $(CURDIR)/src/zsh ] || cd $(CURDIR)/src && git clone https://github.com/zsh-users/zsh.git
 
 
 zsh-pull: zsh-clone
