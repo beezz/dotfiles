@@ -7,6 +7,7 @@ RUN apt-get update \
  	build-essential \
 	git \
 	python-virtualenv \
+	python3 \
  && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -d /home/beezz/ -m beezz
