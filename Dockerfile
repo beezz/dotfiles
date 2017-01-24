@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:testing
 
 ENV LANG C.UTF-8
 
@@ -9,6 +9,7 @@ RUN apt-get update \
 	python-virtualenv \
 	python3 \
 	python-dev \
+	python3-dev \
  && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -d /home/beezz/ -m beezz
