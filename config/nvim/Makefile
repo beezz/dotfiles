@@ -13,6 +13,15 @@ install:
 		|| ln -s $(NVIMRC_LINK_TARGET) $(NVIMRC_LINK_NAME) \
 		&& echo "- $(NVIMRC_LINK_NAME) installed"
 
+	@echo "- nvim installing pyvenvs"
+	@test -d $(NVIMRC_LINK_DIR)pyvenvs || mkdir -p $(NVIMRC_LINK_DIR)pyvenvs
+	@virtualenv -p python2 $(NVIMRC_LINK_DIR)pyvenvs/py2
+	@$(NVIMRC_LINK_DIR)pyvenvs/py2/bin/pip install neovim --upgrade
+
+	@test -d $(NVIMRC_LINK_DIR)pyvenvs || mkdir -p $(NVIMRC_LINK_DIR)pyvenvs
+	@virtualenv -p python3 $(NVIMRC_LINK_DIR)pyvenvs/py3
+	@$(NVIMRC_LINK_DIR)pyvenvs/py3/bin/pip install neovim --upgrade
+
 
 clean:
 	@test -L $(NVIMRC_LINK_NAME) \
