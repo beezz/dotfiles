@@ -8,6 +8,7 @@ RUN apt-get update \
 	git \
 	python-virtualenv \
 	python3 \
+	python-dev \
  && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -d /home/beezz/ -m beezz
