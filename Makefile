@@ -56,6 +56,10 @@ x-clean:
 	$(MAKE) -C config/x clean
 
 
+nvim:
+	$(MAKE) -C config/nvim install
+
+
 test:
 	python -m pytest -v
 
@@ -65,7 +69,7 @@ clean: zsh-clean tmux-clean x-clean
 	@echo 'dotfiles uninstalled'
 	@echo
 
-install: zsh tmux x
+install: zsh tmux x nvim
 	@echo
 	@echo
 	@echo 'dotfiles installed. Enjoy.'
