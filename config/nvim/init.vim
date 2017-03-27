@@ -61,6 +61,7 @@
  NeoBundle 'racer-rust/vim-racer'
  NeoBundle 'rust-lang/rust.vim'
  NeoBundle 'lepture/vim-jinja'
+ NeoBundle 'bracki/vim-prometheus'
 
 
  call neobundle#end()
