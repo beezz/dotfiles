@@ -40,7 +40,7 @@ ZSH_THEME_VIRTUALENV_PREFIX="%{$reset_color%}[%{$fg[blue]%}"
 ZSH_THEME_VIRTUALENV_SUFFIX="%{$reset_color%}] "
 
 # Two line prompt
-PROMPT=$'%~ $(virtualenv_prompt_info)$(vcs_status)\n»%b '
+PROMPT=$'[$(whoami)@$(hostname)]%~ $(virtualenv_prompt_info)$(vcs_status)\n»%b '
 
 
 # load the junegunn's fuzzy command line finder configuration
