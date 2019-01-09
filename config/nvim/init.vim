@@ -61,6 +61,7 @@
  NeoBundle 'racer-rust/vim-racer'
  NeoBundle 'rust-lang/rust.vim'
  NeoBundle 'lepture/vim-jinja'
+ NeoBundle 'bracki/vim-prometheus'
 
 
  call neobundle#end()
@@ -208,8 +209,8 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 nnoremap <F5> :GundoToggle<CR>
 
 
-let g:python_host_prog = $HOME.'/.config/nvim/pyenvs/py2/bin/python'
-let g:python3_host_prog = $HOME.'/.config/nvim/pyenvs/py3/bin/python'
+let g:python_host_prog = $HOME.'/.config/nvim/pyvenvs/py2/bin/python'
+let g:python3_host_prog = $HOME.'/.config/nvim/pyvenvs/py3/bin/python'
 
 let g:PaperColor_Light_Override = {'background' : '#0000'}
 
